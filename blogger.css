@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@100;200;300&family=Lexend+Deca&family=Livvic:wght@100&display=swap');
+
+/* font-family: 'Abel', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+font-family: 'Livvic', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* ******* global class ********** */
+a{
+    text-decoration: none;
+
+}
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--text-light);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 50px;
+
+}
+h2{
+   
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 30px;
+}
+h3{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.text-gray{
+    color: var(--text-gray);
+}
+:root{
+    /* theme color */
+    --text-gray:#3f4954;
+    --text-light:#383737da;
+    --bg-colo:#0f0f0f;
+    --white:#ffffff;
+    --midnight:#104f55;
+
+    /* gradiant color */
+    --sky: linear-gradient(120deg, #5a98fb 0%, #6ac8f3 100%);
+}
+
+button.btn{
+    margin: 30px;
+    background: var(--sky);
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* *************** navbar ********************* */
+.nav{
+   
+    /* border: 2px solid red; */
+    padding: 0 2rem;
+    /* height: 0rem;
+    min-height: 40vh; */
+    height: 120px;
+    overflow: hidden;
+      
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+    
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+
+}
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding:10px 30px;
+}
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 30px;
+    color: var(--text-gray);
+}
+
+.nav .nav-items{
+   
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 30px 25px;
+    font-size: 25px;
+    position: relative;
+    font-family: 'Lexend Deca', sans-serif;
+   
+    font-weight: bold;
+    
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+    
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+.nav .nav-brand{
+    border: 3px outset red;
+    text-align: center;
+    margin-top: 10px;
+    height: 100px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: rgb(198, 255, 255);
+    
+}
+
+@keyframes change{
+    0% {color: rgb(250, 0, 0); }
+    10% {color: rgb(0, 75, 250);}
+    20% {color: rgb(71, 250, 0);}
+    30% {color: rgb(250, 246, 0);}
+    40% {color: rgb(250, 0, 217);}
+    50% {color: rgb(0, 250, 237);}
+    60% {color: rgb(250, 0, 104);}
+    70% {color: rgb(0, 250, 21);}
+    80% {color: rgb(250, 0, 104);}
+    90% {color: rgb(250, 112, 0);}
+    
+}
+
+#animate{
+    animation-name: change;
+    animation-duration:10s;
+    animation-delay: 8s; 
+    animation-iteration-count: infinite;
+}
+.nav .nav-brand a{
+    font-size: 30px;
+    padding: 25px 0;   
+    display: block;
+    font-family: 'Anton', sans-serif;
+    color: rgb(255, 0, 55);
+    font-size: 30px;
+    
+}
+
+.nav .social{
+    padding: 30px 0;
+    font-size: 30px;
+}
+
+.nav .social i{
+    padding: 0 6px;
+}
+.nav .social i:hover{
+    color: rgb(204, 145, 50);
+
+}
+/* ************ main section design **************** */
+
+main .site-title{
+    background-image: url('../img/assets/Background-image.png');
+    background-size: cover;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+}
+main .site-title .site-background{
+    padding-top:250px;
+    text-align: center;
+    color: var(--white);
+}
+main .site-title h1,h3{
+    margin: 5px;
+}
+main .site-title .btn:hover{
+    box-shadow: 0 0 40px 0 rgb(255, 254, 254);  
+    background: transparent;
+    border: 2px solid black;
+    color: var(--white);
+}
+
+/* ************* Blog Carousel ******************* */
+
+main .blog{
+    /* border: 2px solid red; */
+    background: url('../img/assets/Abract01.png');
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    margin-top: 10px;
+    background-size: 1300px;
+    overflow: hidden;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 30px 20px rgba(0,0,0,0.2);
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0 ;
+}
+main .blog-content .btn-blog{
+    padding: 5px 7px;
+    background: var(--sky);
+    margin: 10px;
+}
+
+main .blog-content span{
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 50px auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 30px;
+}
+/* class*='owl- mean jo class owl se start hoti h use hover kro */
+.owl-theme .owl-nav[class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);
+
+}
+.owl-theme .owl-nav[class*='owl-']{
+    outline: none;
+}
+
+
+/* ****** site content css **************** */
+main .site-content{
+    display: grid;
+    /* here we use grid 70% for post and 30% for categories */
+    grid-template-columns: 70% 30%;
+    margin-top: 50px;
+}
+
+main .post-content{
+    width: 100%;
+  
+}
+
+main .site-content .post-content> .post-image,.post-title{
+    padding: 16px 32px;
+    position: relative;
+}
+
+main .site-content .post-content> .post-image .post-info{
+    background: var(--sky);
+    padding: 16px;
+    position: absolute;
+    bottom: 0%;
+    margin-left: 300px;
+    border-radius: 48px;
+}
+main .site-content .post-content>.post-image>div{
+    overflow: hidden;
+}
+/* for image */
+main .site-content .post-content> .post-image .img{
+    width: 100%;
+    transition: all 1s ease-in;
+    
+}
+main .site-content .post-content> .post-image .img:hover{
+    transform: scale(1.3);
+}
+
+main .site-content .post-content>.post-image .post-info span{
+    margin: 0 8px;
+}
+main .post-content .post-title a{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+}
+.site-content .post-content .post-title .post-btn{
+   
+   
+    margin-top:10px ;
+    margin-left: 2px;
+}
+
+/* ******** pagination ****** */
+.site-content .pagination{
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 64px 0;
+}
+.site-content .pagination a{
+    padding: 7px 10px;
+    border-radius: 32px;
+    margin: 5px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.site-content .pagination .pages{
+    background-color: var(--text-gray);
+    color: white;
+}
+
+/* **** for side bar *********** */
+.site-content> .sidebar .category{
+    font-family: 'Lexend Deca', sans-serif;
+    /* padding: 20px 80px; */
+    margin: 30px 30px ;
+
+}
+
+.site-content> .sidebar .category-list{
+    /* border: 2px solid red; */
+    width: 100%;
+    padding-left: 40px;
+
+    
+    font-size: 20px;
+}
+.site-content> .sidebar .category-list .list-items{
+    background: var(--sky);
+    background-size: 50px;
+    padding: 7px 20px;
+    margin: 10px 0;
+    border-radius: 48px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.site-content> .sidebar .category-list .list-items a{
+    color: black;
+}
+
+.site-content .sidebar .popular-post .post-content{
+    padding: 16px 0;
+
+}
+.site-content .sidebar .popular-post h2{
+    padding-top: 144px;
+    margin-left: 50px;
+}
+
+.site-content .sidebar .popular-post .post-info{
+    padding: 0.4rem .1rem !important;
+    bottom: 0rem !important;
+    margin-left: 0.0rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a{
+    font-size: 20px;
+}
+
+.site-content .sidebar .news-letter{
+    padding-top: 200px;
+    margin-left: 40px;
+}
+.site-content .sidebar .news-letter h2{
+    margin-left: 80px;
+}
+.site-content .sidebar .news-letter .form-element{
+    padding: 9px 32px;
+}
+
+.site-content .sidebar .news-letter .form-element .btn{
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 80%;
+}
+.site-content .sidebar .news-letter .form-element .input-element{
+    width: 80%;
+    height: 40px;
+    padding: 5px 8px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
+}
+
+/* ****** popular tags ******* */
+.site-content .sidebar .popular-tags{
+    padding: 200px 50px;
+}
+.site-content .sidebar .popular-tags h2{
+    margin-left: 80px;
+}
+
+.site-content .sidebar .popular-tags .tag{
+    margin-top: 10px !important;
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 48px;
+    margin: .4rem .6rem;
+}
+
+/* ************* footer ******************************* */
+
+footer.footer{
+    height: 100%;
+    background: black;
+    position: relative;
+}
+footer.footer .container{
+    display: grid;
+    /* 4 mean 4 column and 1fr is width 25% all four section */
+    grid-template-columns: repeat(4,1fr);
+}
+footer.footer .container>div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 48px 15px;
+
+}
+footer.footer .container .about-us p{
+    padding: 10px 0;
+ 
+}
+
+footer.footer .container .about-us h2,p{
+    color: white;
+}
+footer.footer .container .newsletter h2{
+    color: white;
+}
+footer.footer .container .newsletter p{
+    padding-top: 20px;
+}
+
+footer.footer .container .newsletter .form-element{
+    background: black;
+    display: inline-block;
+    padding-top: 20px;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    width: 74%;
+}
+footer.footer .newsletter .form-element span{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+/* *** instagram *************** */
+footer.footer .instagram h2{
+    color: white;
+ 
+}
+footer.footer .instagram div> img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+    padding-top:10px ;
+}
+
+footer.footer .follow h2,p{
+    color: white;
+}
+footer.footer .follow p{
+   font-size: 20px;
+    padding-top: 15px;
+}
+footer.footer .follow div i{
+    color: white;
+    padding: 0.8rem .4rem;
+    font-size: 30px;
+}
+
+footer.footer .rights{
+    justify-content: center;
+    font-family: 'Lexend Deca', sans-serif;
+    padding-bottom: 10px;
+}
+footer.footer .rights h4{
+    color: white;
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+footer.footer .move-up span{
+    color: var(--midnight);
+}
+footer.footer .move-up span:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Viewport less than or equal to 1130px mean make navbar responsive */
+@media only screen and (max-width:1130px){
+    .site-content .post-content > .post-image .post-info{
+        margin-left:0px !important;
+        bottom: 16px !important;
+        border-radius: 0% !important;
+    }
+    .site-content .sidebar .popular-post .post-info{
+        display: none !important;
+    }
+    footer.footer .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+
+
+
+
+
+/* ******** Viewport less than or equal to 750px mean make navbar responsive */
+
+@media only screen and (max-width:768px){
+    .nav .nav-menu,.nav .nav-items{
+        flex-direction: column;  
+    }
+
+   
+    .nav .toggle-collapse{
+        display: initial;
+        
+    }
+ 
+    
+    .nav{
+        flex-direction: column;
+        transition: all 0.7s ease-out;
+        height:700px;
+    }
+    .h-nav-resp{
+        height: 150px;
+    }
+    .v-class-resp{
+        opacity: 0;
+    }
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+    footer.footer .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* ******** Viewport less than or equal to 520px mean make navbar responsive */
+
+@media only screen and (max-width:520px){
+    main .blog{
+        height: 100vh;
+    }
+    .site-content .post-content > .post-image .post-info{
+        display: none;
+    }
+    footer.footer .container>div{
+        padding: 1rem .9rem !important;
+    }
+    nav .toggle-collapse{
+        width: 80% !important;
+        
+    }
+  
+
+}
+
